@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1
-  # GET /users/1.json
+  # GET /users/1.jsonx
   def show
   end
 
