@@ -23,4 +23,9 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'name should not be empty' do
+    @user.name = ' '
+    assert_not @user.valid?
+  end
+
 end
