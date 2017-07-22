@@ -28,4 +28,9 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
+  test 'password should not be empty' do
+    @user.password = ' '
+    assert_not @user.valid?
+  end
+
 end
