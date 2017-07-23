@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'static/new'
+
   get 'sessions/new'
 
   resources :users
-  root 'application#hello'
+  root 'static#new'
   get '/signup', to: 'users#new'
   get '/signup', to: 'users#create'
   get '/login', to: 'sessions#new'
