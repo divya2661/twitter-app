@@ -6,8 +6,8 @@
       <%= form_for(@user) do |f| %>
         <input class="form-control" name="user[name]" placeholder="Name"/><br>
         <input class="form-control" name="user[email]" placeholder="Email"/><br>
-        <input class="form-control" name="user[password]" placeholder="Password"/><br>
-        <input class="form-control" name="user[password_confirmation]" placeholder="Password Confirmation"/><br>
+        <input class="form-control" name="user[password]" type="password" placeholder="Password"/><br>
+        <input class="form-control" name="user[password_confirmation]" type="password" placeholder="Password Confirmation"/><br>
         <input style="width: 100%" type="submit" name="commit" value="Create my account" class="btn btn-primary">
       <% end %>
   </div>
