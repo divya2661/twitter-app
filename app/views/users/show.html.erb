@@ -1,6 +1,8 @@
 <%= render 'layouts/header' %><br><br>
 
 <br>
+
+<% if logged_in? %>
 <div class="col-md-6 col-md-offset-3">
   <textarea class="form-control" rows="3" id="comment"></textarea><br>
   <input style="width: 100%" type="submit" name="commit" value="Tweet" class="btn btn-primary">
@@ -25,5 +27,8 @@
   <%= @user.password %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if @user == current_user %>
+  <%= link_to 'Edit', edit_user_path(@user) %>
+<% end %>
 <%= link_to 'Back', users_path %>
+<% end %>
